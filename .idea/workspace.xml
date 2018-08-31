@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="375e6c5d-60e6-4934-98f0-1abdc735fa92" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/my_choise_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_cases.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/about_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_login_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/login_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainpage.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainpage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_mainpage.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_mainpage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/voting_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/voting_page.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,20 +23,23 @@
       <file leaf-file-name="mainpage.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainpage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="47" selection-start-line="47" selection-end-line="47" />
+            <state relative-caret-position="302">
+              <caret line="79" column="24" lean-forward="true" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="24" />
               <folding>
-                <element signature="e#24#79#0" expanded="true" />
+                <element signature="e#25#80#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="my_choise_page.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my_choise_page.py">
+      <file leaf-file-name="about_page.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/about_page.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="510">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
+              <folding>
+                <element signature="e#25#80#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -43,8 +47,8 @@
       <file leaf-file-name="voting_page.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/voting_page.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="238">
+              <caret line="17" column="91" selection-start-line="17" selection-start-column="91" selection-end-line="17" selection-end-column="91" />
             </state>
           </provider>
         </entry>
@@ -52,8 +56,8 @@
       <file leaf-file-name="login_page.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login_page.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="14" selection-end-line="14" />
+            <state relative-caret-position="306">
+              <caret line="45" column="85" lean-forward="true" selection-start-line="44" selection-start-column="7" selection-end-line="45" selection-end-column="85" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -61,23 +65,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_mainpage.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_mainpage.py">
+      <file leaf-file-name="test_login_page.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_login_page.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+              <caret line="15" column="70" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="15" selection-end-column="70" />
               <folding>
-                <marker date="1535626961800" expanded="true" signature="1156:1372" ph="..." />
+                <element signature="e#0#13#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_cases.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test_mainpage.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test_mainpage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="117" column="62" selection-start-line="117" selection-start-column="62" selection-end-line="117" selection-end-column="62" />
+              <folding>
+                <element signature="e#25#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_cases.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_cases.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="326" column="20" selection-start-line="326" selection-start-column="20" selection-end-line="326" selection-end-column="20" />
+            <state relative-caret-position="-204">
+              <caret line="72" column="10" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -85,8 +101,8 @@
       <file leaf-file-name="xs.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+            <state relative-caret-position="323">
+              <caret line="19" column="120" lean-forward="true" selection-start-line="19" selection-end-line="19" selection-end-column="120" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -103,6 +119,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>login_page</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -114,13 +135,16 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/BaseWebPage.py" />
         <option value="$PROJECT_DIR$/conftest.py" />
-        <option value="$PROJECT_DIR$/xs.py" />
-        <option value="$PROJECT_DIR$/login_page.py" />
         <option value="$PROJECT_DIR$/my_choise_page.py" />
-        <option value="$PROJECT_DIR$/mainpage.py" />
-        <option value="$PROJECT_DIR$/voting_page.py" />
-        <option value="$PROJECT_DIR$/test_mainpage.py" />
+        <option value="$PROJECT_DIR$/trash" />
         <option value="$PROJECT_DIR$/test_cases.txt" />
+        <option value="$PROJECT_DIR$/about_page.py" />
+        <option value="$PROJECT_DIR$/voting_page.py" />
+        <option value="$PROJECT_DIR$/login_page.py" />
+        <option value="$PROJECT_DIR$/xs.py" />
+        <option value="$PROJECT_DIR$/test_login_page.py" />
+        <option value="$PROJECT_DIR$/test_mainpage.py" />
+        <option value="$PROJECT_DIR$/mainpage.py" />
       </list>
     </option>
   </component>
@@ -165,7 +189,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test_mainpage">
+  <component name="RunManager" selected="Python.xs">
     <configuration name="singleton" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="test_awards_silpo" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -179,6 +203,24 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/singleton.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="test_login_page" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="test_awards_silpo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_login_page.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -224,11 +266,13 @@
       <item itemvalue="Python.singleton" />
       <item itemvalue="Python.test_mainpage" />
       <item itemvalue="Python.xs" />
+      <item itemvalue="Python.test_login_page" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test_mainpage" />
         <item itemvalue="Python.xs" />
+        <item itemvalue="Python.test_login_page" />
+        <item itemvalue="Python.test_mainpage" />
         <item itemvalue="Python.singleton" />
       </list>
     </recent_temporary>
@@ -265,21 +309,27 @@
       <option name="project" value="LOCAL" />
       <updated>1535463193049</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added test-cases for almost all pages">
+      <created>1535638589204</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1535638589205</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32960895" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.37765363" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.44022346" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -298,7 +348,8 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="first commit" />
     <MESSAGE value="added some test functions and page descriptions" />
-    <option name="LAST_COMMIT_MESSAGE" value="added some test functions and page descriptions" />
+    <MESSAGE value="added test-cases for almost all pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="added test-cases for almost all pages" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/mainpage.py">
@@ -306,7 +357,7 @@
         <state relative-caret-position="697">
           <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
           <folding>
-            <element signature="e#24#79#0" expanded="true" />
+            <element signature="e#25#80#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -350,7 +401,7 @@
         <state relative-caret-position="1989">
           <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
           <folding>
-            <marker date="1535626961800" expanded="true" signature="1156:1372" ph="..." />
+            <element signature="e#25#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -360,7 +411,7 @@
         <state relative-caret-position="340">
           <caret line="24" column="116" selection-start-line="24" selection-start-column="116" selection-end-line="24" selection-end-column="116" />
           <folding>
-            <element signature="e#24#79#0" expanded="true" />
+            <element signature="e#25#80#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -387,7 +438,7 @@
         <state relative-caret-position="680">
           <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
           <folding>
-            <marker date="1535626961800" expanded="true" signature="1156:1372" ph="..." />
+            <element signature="e#25#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -407,7 +458,7 @@
         <state>
           <caret column="17" selection-start-column="17" selection-end-column="17" />
           <folding>
-            <element signature="e#24#79#0" expanded="true" />
+            <element signature="e#25#80#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -417,7 +468,7 @@
         <state relative-caret-position="170">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
           <folding>
-            <marker date="1535626961800" expanded="true" signature="1156:1372" ph="..." />
+            <element signature="e#25#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -426,6 +477,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -461,25 +515,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="18" lean-forward="true" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
           <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -491,37 +528,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/trash">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="e#25#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/voting_page.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="91" selection-start-line="17" selection-start-column="91" selection-end-line="17" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_cases.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="72" column="10" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xs.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <caret line="19" column="120" lean-forward="true" selection-start-line="19" selection-end-line="19" selection-end-column="120" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="45" column="85" lean-forward="true" selection-start-line="44" selection-start-column="7" selection-end-line="45" selection-end-column="85" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_login_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="70" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="15" selection-end-column="70" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mainpage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        <state relative-caret-position="302">
+          <caret line="79" column="24" lean-forward="true" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="24" />
           <folding>
-            <element signature="e#24#79#0" expanded="true" />
+            <element signature="e#25#80#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_mainpage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="336">
+          <caret line="117" column="62" selection-start-line="117" selection-start-column="62" selection-end-line="117" selection-end-column="62" />
           <folding>
-            <marker date="1535626961800" expanded="true" signature="1156:1372" ph="..." />
+            <element signature="e#25#38#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_cases.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="326" column="20" selection-start-line="326" selection-start-column="20" selection-end-line="326" selection-end-column="20" />
         </state>
       </provider>
     </entry>

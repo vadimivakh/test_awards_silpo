@@ -13,10 +13,9 @@ class VotingPage:
     def page_content(self, driver):
         return self.driver.page_source
 
-    def left_menu_is_not_present(self, driver):
+    def left_menu_is_enable(self, driver):
         try:
-            WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "ul[class='menu']"))).click()
+            WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "ul[class='menu']"))).click()
         except TimeoutException:
             return False
-        finally:
-            return self
+        return True

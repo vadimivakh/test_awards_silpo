@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
@@ -6,6 +7,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from login_page import LoginPage
 from voting_page import VotingPage
 from my_choise_page import MyChoisePage
+from about_page import AboutProjectPage
+
 
 class MainPage:
 
@@ -34,7 +37,7 @@ class MainPage:
 
     def click_to_about_project_topmenu_item(self, driver):
         WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.XPATH, "//div[@class='topMenu-item'][2]"))).click()
-        return self
+        return AboutProjectPage(driver)
 
     def click_to_rules_topmenu_item(self, driver):
         WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.XPATH, "//div[@class='topMenu-item'][3]"))).click()
@@ -45,10 +48,10 @@ class MainPage:
         return self
 
     def click_to_my_choice_topmenu_item(self, driver):
-
+        WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.XPATH, "//span[text()='Голосувати']"))).click()
         return MyChoisePage(driver)
 
-    def click_to_login_section(self, driver):
+    def click_to_login_button(self, driver):
         self.wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "a[class='exit-icon-wrapper topMenu-item']"))).click()
         return LoginPage(driver)
 
@@ -69,3 +72,14 @@ class MainPage:
 
     def counter_is_enabled(self, driver):
         return self.wait.until(EC.element_to_be_clickable((By.XPATH, "//div[@class='countdown']"))).is_displayed()
+
+    def click_to_logo_topmenu_item(self, driver):
+        WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.CSS_SELECTOR, "div[class='topMenu-silpoElephant topMenu-item']"))).click()
+        return self
+
+    def vote_button_value_equals_to(self, driver, button_text):
+        try:
+            button = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.CSS_SELECTOR, "//span[contains(text(),'увійти')]")))
+            return button.text == button_text
+        except TimeoutException:
+            return False

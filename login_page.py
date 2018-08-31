@@ -6,6 +6,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
+from my_choise_page import MyChoisePage
 
 
 class LoginPage:
@@ -45,11 +46,11 @@ class LoginPage:
             EC.presence_of_element_located((By.ID, "number"))).send_keys(card_number)
         WebDriverWait(driver, 3).until(
             EC.presence_of_element_located((By.XPATH, "//span[contains(text(),'увійти')]"))).click()
-        return self
+        return MyChoisePage(driver)
 
     def submit_button_is_active(self, driver):
-        submit_button = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.XPATH, "//span[contains(text(),'увійти')]")))
-        return submit_button.is_enabled()
+        # submit_button = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.XPATH, "//span[contains(text(),'увійти')]")))
+        return WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.XPATH, "//span[contains(text(),'увійти')]"))).is_enabled
 
     def login_with_invalid_card(self, driver, card_number):
         WebDriverWait(driver, 3).until(
@@ -58,3 +59,7 @@ class LoginPage:
             EC.presence_of_element_located((By.XPATH, "//span[contains(text(),'увійти')]")))
         return button.is_enabled()
 
+    def login_with_empty_field(self, driver):
+        WebDriverWait(driver, 3).until(
+            EC.presence_of_element_located((By.ID, "number"))).send_keys('', Keys.TAB)
+        return self
