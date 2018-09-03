@@ -79,7 +79,36 @@ class MainPage:
 
     def vote_button_value_equals_to(self, driver, button_text):
         try:
-            button = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.CSS_SELECTOR, "//span[contains(text(),'увійти')]")))
+            button = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.XPATH, "//span[contains(text(),'ГОЛОСУВАТИ')]")))
             return button.text == button_text
+        except TimeoutException:
+            return False
+
+    def topmenu_height(self, driver):
+        try:
+            topmenu = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.CSS_SELECTOR, "div[class='topMenu']")))
+            return topmenu.value_of_css_property('height')
+        except TimeoutException:
+            return False
+
+    def topmenu_items_fontsize(self, driver):
+        try:
+            topmenu = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.CSS_SELECTOR, "div[class='topMenu']")))
+            return topmenu.value_of_css_property('font-size')
+        except TimeoutException:
+            return False
+
+    def topmenu_button_clicked_color(self, driver):
+        try:
+            topmenu = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.XPATH, "//span[contains(text(),'Голосувати')]")))
+            topmenu.click()
+            return topmenu.value_of_css_property('color')
+        except TimeoutException:
+            return False
+
+    def topmenu_font_family(self, driver):
+        try:
+            topmenu = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.CSS_SELECTOR, "div[class='topMenu']")))
+            return topmenu.value_of_css_property('font-family')
         except TimeoutException:
             return False

@@ -110,12 +110,52 @@ from mainpage import MainPage
 #     homepage = MainPage(chromedriver)
 #     current_url = homepage.current_url
 #     assert must_be_url == current_url
+#
+#
+# # without_id
+# def test_matching_button_value(chromedriver):
+#     homepage = MainPage(chromedriver)
+#     assert homepage.vote_button_value_equals_to(driver=chromedriver, button_text='ГОЛОСУВАТИ')
+#
+#
+# # without_id
+# def test_topmenu_height(chromedriver):
+#     homepage = MainPage(chromedriver)
+#     assert homepage.topmenu_height(chromedriver) == '70px'
+#
+#
+# # without_id
+# def test_topmenu_items_fontsize(chromedriver):
+#     homepage = MainPage(chromedriver)
+#     assert homepage.topmenu_items_fontsize(chromedriver) == '16px'
+#
+# # without_id
+# def test_topmenu_background_color(chromedriver):
+#     pass
+#
+#
+# # without_id
+# def test_topmenu_button_clicked_color(chromedriver):
+#     homepage = MainPage(chromedriver)
+#     homepage.click_to_voting_topmenu_item()
+#     assert homepage.topmenu_button_clicked_color(chromedriver) == 'rgba(238, 117, 1, 1)'
 
+
+# # without_id
+# def test_topmenu_font_family(chromedriver):
+#     homepage = MainPage(chromedriver)
+#     assert homepage.topmenu_font_family(chromedriver) == 'sans-serif'
+
+
+"""
+                                               LOGINPAGE AWARDS
+"""
 
 # without_id
-def test_matching_button_value(chromedriver):
+def test_title_text_size(chromedriver):
     homepage = MainPage(chromedriver)
-    assert homepage.vote_button_value_equals_to(driver=chromedriver, button_text='ГОЛОСУВАТИ')
+    loginpage = homepage.click_to_login_button(chromedriver)
+    assert loginpage.title_text_size() ==
 
 
 # осталось посмотреть tc_9  и зафейленные 4 теста
