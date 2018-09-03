@@ -13,6 +13,12 @@ class LoginPage:
 
     def __init__(self, driver):
         self.driver = driver
+        self.driver.get("http://awards.silpo.iir.fozzy.lan/login")
+
+        # submit_button = WebDriverWait(driver, 3).until(
+        #     EC.presence_of_element_located((By.CSS_SELECTOR, "//span[contains(text(),'увійти')]")))
+
+        self.xpath_locator_for_validation_message = "//div[@class='validation-message']"
 
     def top_menu_is_exists(self, driver):
         try:
@@ -50,7 +56,8 @@ class LoginPage:
 
     def submit_button_is_active(self, driver):
         # submit_button = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.XPATH, "//span[contains(text(),'увійти')]")))
-        return WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.XPATH, "//span[contains(text(),'увійти')]"))).is_enabled
+        return WebDriverWait(driver, 3).until(
+            EC.presence_of_element_located((By.XPATH, "//span[contains(text(),'увійти')]"))).is_enabled
 
     def login_with_invalid_card(self, driver, card_number):
         WebDriverWait(driver, 3).until(
@@ -63,3 +70,38 @@ class LoginPage:
         WebDriverWait(driver, 3).until(
             EC.presence_of_element_located((By.ID, "number"))).send_keys('', Keys.TAB)
         return self
+
+    def title_text_size(self, driver):
+        try:
+            title_text = WebDriverWait(driver, 3).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, "p[class='title-text']")))
+            return title_text.value_of_css_property('font-size')
+        except TimeoutException:
+            return False
+
+    def title_text_margin_bottom(self, driver):
+        try:
+            title_text = WebDriverWait(driver, 3).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, "p[class='title-text']")))
+            return title_text.value_of_css_property('margin-bottom')
+        except TimeoutException:
+            return False
+
+    def validation_message(self, driver):
+
+        """Returns a text of a validation message if it is existed"""
+        try:
+            validation_text = WebDriverWait(driver, 3).until(
+                EC.presence_of_element_located((By.XPATH, self.xpath_locator_for_validation_message)))
+            return validation_text.text
+        except TimeoutException:
+            return False
+
+    def login_with_not_full_card_number(self, driver, card_number):
+
+        """Loginisation with not full card number. Card has less than 13 symbols"""
+        WebDriverWait(driver, 3).until(
+            EC.presence_of_element_located((By.ID, "number"))).send_keys(card_number, Keys.TAB)
+        return self
+
+
