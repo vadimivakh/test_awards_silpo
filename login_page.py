@@ -87,7 +87,7 @@ class LoginPage:
         except TimeoutException:
             return False
 
-    def validation_message(self, driver):
+    def get_validation_message(self, driver):
 
         """Returns a text of a validation message if it is existed"""
         try:
@@ -104,4 +104,10 @@ class LoginPage:
             EC.presence_of_element_located((By.ID, "number"))).send_keys(card_number, Keys.TAB)
         return self
 
+    def fill_the_card_number_field(self, driver, card_number):
+
+        """Login with entered card number without clicking the 'увійти' button"""
+        WebDriverWait(driver, 3).until(
+            EC.presence_of_element_located((By.ID, "number"))).send_keys(card_number, Keys.TAB)
+        return self
 

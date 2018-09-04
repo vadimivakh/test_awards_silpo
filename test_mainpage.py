@@ -3,6 +3,7 @@
 import pytest
 from time import sleep
 from mainpage import MainPage
+from faq_page import FaqPage
 
 """
                                                 MAINPAGE AWARDS
@@ -66,7 +67,7 @@ from mainpage import MainPage
 #
 #     """Check if the action of 'ПИТАННЯ ТА ВІДПОВІДІ' button on Top-Menu is correct"""
 #     homepage = MainPage(chromedriver)
-#     homepage.click_to_fag_topmenu_item(chromedriver)
+#     homepage.click_to_faq_topmenu_item(chromedriver)
 #     assert 'Питання та відповіді' in homepage.page_content(chromedriver)
 #
 #
@@ -194,7 +195,7 @@ from mainpage import MainPage
 """
                                                LOGINPAGE AWARDS
 """
-#
+
 # # without_id
 # def test_title_text_size(chromedriver):
 #     homepage = MainPage(chromedriver)
@@ -216,6 +217,18 @@ from mainpage import MainPage
 #     loginpage = homepage.click_to_login_button(chromedriver)
 #     status = loginpage
 
+
+# # without_id
+# def test_login_with_correct_card_number(chromedriver):
+#
+#     """Check if the loginisation has correct functioning with valid card numder (029 0226351066). Cardnumber contains one space"""
+#     homepage = MainPage(chromedriver)
+#     loginpage = homepage.click_to_login_button(chromedriver)
+#     my_choise_page = loginpage.login_with_valid_card(driver=chromedriver, card_number='029 0226351066')
+#     search_word = 'Мій вибір'
+#     assert search_word in my_choise_page.page_content(chromedriver)
+
+#
 # # without_id
 # def test_validation_message_caused_by_sending_empty_field(chromedriver):
 #
@@ -225,16 +238,93 @@ from mainpage import MainPage
 #     loginpage.login_with_empty_field(chromedriver)
 #     validation_message_text = loginpage.validation_message(chromedriver)
 #     assert validation_message_text == 'Поле обов\'зкове для заповнення'
+#
+#
+# # without_id
+# def test_validation_message_caused_by_sending_short_card_numder_12_symbols(chromedriver):
+#
+#     """Check if the validation message 'Номер має містити 13 цифр' has correct function with notfull card numder - 029107716444"""
+#     homepage = MainPage(chromedriver)
+#     loginpage = homepage.click_to_login_button(chromedriver)
+#     loginpage.login_with_not_full_card_number(driver=chromedriver, card_number='029107716444')
+#     validation_text_message = loginpage.validation_message(chromedriver)
+#     assert validation_text_message == 'Номер має містити 13 цифр'
+#
+#
+# # without_id
+# def test_validation_message_caused_by_sending_short_card_number_5_symbols(chromedriver):
+#
+#     """Check if the validation message 'Номер має містити 13 цифр' has correct function with notfull card numder - 02910"""
+#     homepage = MainPage(chromedriver)
+#     loginpage = homepage.click_to_login_button(chromedriver)
+#     loginpage.login_with_not_full_card_number(driver=chromedriver, card_number='02910')
+#     validation_text_message = loginpage.validation_message(chromedriver)
+#     assert validation_text_message == 'Номер має містити 13 цифр'
+#
+#
+# # without_id
+# def test_validation_message_caused_by_invalid_card_number_1_symbol(chromedriver):
+#
+#     """Check if the validation message 'Номер має містити 13 цифр' has correct function with invalid card numder - 0"""
+#     homepage = MainPage(chromedriver)
+#     loginpage = homepage.click_to_login_button(chromedriver)
+#     loginpage.login_with_not_full_card_number(driver=chromedriver, card_number='0')
+#     validation_text_message = loginpage.get_validation_message(chromedriver)
+#     assert validation_text_message.lower() == 'номер має містити 13 цифр'
+#
+#
+# # without_id
+# def test_validation_message_caused_by_invalid_card_number(chromedriver):
+#
+#     """Check if the validation message 'Невірний номер карти' has correct function with invalid card numder - 1111111111111"""
+#     homepage = MainPage(chromedriver)
+#     loginpage = homepage.click_to_login_button(chromedriver)
+#     loginpage.login_with_not_full_card_number(driver=chromedriver, card_number='1111111111111')
+#     validation_text_message = loginpage.validation_message(chromedriver)
+#     assert validation_text_message == 'Невірний номер карти'
 
 
-# without_id
-def test_validation_message_caused_by_sending_short_card_numder(chromedriver):
+# # # without_id
+# def test_error_message_does_not_exists_with_valid_card_number(chromedriver):
+#
+#     """Check if the validation message does not exists after entering the valid card number - 0291077164447"""
+#     homepage = MainPage(chromedriver)
+#     loginpage = homepage.click_to_login_button(chromedriver)
+#     loginpage.fill_the_card_number_field(driver=chromedriver, card_number='0291077164447')
+#     error_message = loginpage.get_validation_message(chromedriver)
+#     assert len(error_message) == 0
 
-    """Check if the validation message 'Номер має містити 13 цифр' has correct function with notfull card numder - 029107716444"""
+
+
+"""
+                                               FAQ PAGE AWARDS
+"""
+
+
+# # tc_21
+# def test_title_of_the_faq_page(chromedriver):
+#
+#     """ Checking the title of the page 'Питання та відповіді' """
+#     homepage = MainPage(chromedriver)
+#     faq_page = homepage.click_to_fag_topmenu_item(chromedriver)
+#     assert 'Питання та відповіді' in faq_page.page_content(chromedriver)
+
+
+# tc_22
+def test_content_contains_10_questions(chromedriver):
+
+    """ Check if the content block is enabled on the FAQ page """
     homepage = MainPage(chromedriver)
-    loginpage = homepage.click_to_login_button(chromedriver)
-    loginpage.login_with_not_full_card_number(driver=chromedriver, card_number='029107716444')
-    validation_text_message = loginpage.validation_message(chromedriver)
-    assert validation_text_message == 'Номер має містити 13 цифр'
+    faq_page = homepage.click_to_faq_topmenu_item(chromedriver)
+    assert faq_page.number_of_question(chromedriver) == 10
+    # assert 'Питання та відповіді' in faq_page.page_content(chromedriver)
 
-# написать проверку работы сообщения об ошибке при неверном номере карты ВР
+# # tc_23
+# def test_quantity_of_the_questions(chromedriver):
+#
+#     """" Checking the disclosure of the block with the question """
+#     homepage = MainPage(chromedriver)
+
+
+
+# пересмотреть 22,

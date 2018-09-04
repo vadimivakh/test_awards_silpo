@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from time import sleep
 
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.by import By
@@ -8,6 +9,7 @@ from login_page import LoginPage
 from voting_page import VotingPage
 from my_choise_page import MyChoisePage
 from about_page import AboutProjectPage
+from faq_page import FaqPage
 
 
 class MainPage:
@@ -56,85 +58,100 @@ class MainPage:
             EC.presence_of_element_located((By.XPATH, self.xpath_locator_rules_topmenu_item))).click()
         return self
 
-    def click_to_fag_topmenu_item(self, driver):
+    def click_to_faq_topmenu_item(self, driver):
         WebDriverWait(driver, 3).until(
             EC.presence_of_element_located((By.XPATH, self.xpath_locator_faq_topmenu_item))).click()
-        return self
+        sleep(2)
+        return FaqPage(driver)
 
-    def click_to_my_choice_topmenu_item(self, driver):
-        WebDriverWait(driver, 3).until(
-            EC.presence_of_element_located((By.XPATH, self.xpath_locator_my_choise_topmenu_item))).click()
-        return MyChoisePage(driver)
 
-    def click_to_login_button(self, driver):
-        self.wait.until(
-            EC.element_to_be_clickable((By.CSS_SELECTOR, self.xpath_locator_login_button_topmenu_item))).click()
-        return LoginPage(driver)
+def click_to_my_choice_topmenu_item(self, driver):
+    WebDriverWait(driver, 3).until(
+        EC.presence_of_element_located((By.XPATH, self.xpath_locator_my_choise_topmenu_item))).click()
+    return MyChoisePage(driver)
 
-    def page_content(self, driver):
-        return self.driver.page_source
 
-    def vote_button_is_displayed_on_the_page(self, driver):
-        return self.wait.until(
-            EC.element_to_be_clickable((By.XPATH, self.xpath_locator_vote_button))).is_displayed()
+def click_to_login_button(self, driver):
+    self.wait.until(
+        EC.element_to_be_clickable((By.CSS_SELECTOR, self.xpath_locator_login_button_topmenu_item))).click()
+    return LoginPage(driver)
 
-    def vote_button_is_enabled(self, driver):
-        return self.wait.until(
-            EC.element_to_be_clickable((By.XPATH, self.xpath_locator_vote_button))).is_enabled()
 
-    def elephant_menu_is_displayed(self, driver):
-        return self.wait.until(
-            EC.element_to_be_clickable((By.CSS_SELECTOR, "div[class='jss36 jss38 jss37 tool-bar']"))).is_enabled()
+def page_content(self, driver):
+    return self.driver.page_source
 
-    def elephant_img_is_enabled(self, driver):
-        return self.wait.until(EC.element_to_be_clickable(
-            (By.CSS_SELECTOR, "img[class='elephant-image-background-slon-big']"))).is_displayed()
 
-    def counter_is_enabled(self, driver):
-        return self.wait.until(EC.element_to_be_clickable((By.XPATH, "//div[@class='countdown']"))).is_displayed()
+def vote_button_is_displayed_on_the_page(self, driver):
+    return self.wait.until(
+        EC.element_to_be_clickable((By.XPATH, self.xpath_locator_vote_button))).is_displayed()
 
-    def click_to_logo_topmenu_item(self, driver):
-        WebDriverWait(driver, 3).until(EC.presence_of_element_located(
-            (By.CSS_SELECTOR, "div[class='topMenu-silpoElephant topMenu-item']"))).click()
-        return self
 
-    def vote_button_text_equals_to(self, driver, button_text):
-        try:
-            button = WebDriverWait(driver, 3).until(
-                EC.presence_of_element_located((By.XPATH, "//span[contains(text(),'ГОЛОСУВАТИ')]")))
-            return button.text == button_text
-        except TimeoutException:
-            return False
+def vote_button_is_enabled(self, driver):
+    return self.wait.until(
+        EC.element_to_be_clickable((By.XPATH, self.xpath_locator_vote_button))).is_enabled()
 
-    def topmenu_height(self, driver):
-        try:
-            topmenu = WebDriverWait(driver, 3).until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, self.xpath_locator_topmenu)))
-            return topmenu.value_of_css_property('height')
-        except TimeoutException:
-            return False
 
-    def topmenu_items_fontsize(self, driver):
-        try:
-            topmenu = WebDriverWait(driver, 3).until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, "div[class='topMenu']")))
-            return topmenu.value_of_css_property('font-size')
-        except TimeoutException:
-            return False
+def elephant_menu_is_displayed(self, driver):
+    return self.wait.until(
+        EC.element_to_be_clickable((By.CSS_SELECTOR, "div[class='jss36 jss38 jss37 tool-bar']"))).is_enabled()
 
-    def topmenu_button_clicked_color(self, driver):
-        try:
-            topmenu = WebDriverWait(driver, 3).until(
-                EC.presence_of_element_located((By.XPATH, "//span[contains(text(),'Голосувати')]")))
-            topmenu.click()
-            return topmenu.value_of_css_property('color')
-        except TimeoutException:
-            return False
 
-    def topmenu_font_family(self, driver):
-        try:
-            topmenu = WebDriverWait(driver, 3).until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, "div[class='topMenu']")))
-            return topmenu.value_of_css_property('font-family')
-        except TimeoutException:
-            return False
+def elephant_img_is_enabled(self, driver):
+    return self.wait.until(EC.element_to_be_clickable(
+        (By.CSS_SELECTOR, "img[class='elephant-image-background-slon-big']"))).is_displayed()
+
+
+def counter_is_enabled(self, driver):
+    return self.wait.until(EC.element_to_be_clickable((By.XPATH, "//div[@class='countdown']"))).is_displayed()
+
+
+def click_to_logo_topmenu_item(self, driver):
+    WebDriverWait(driver, 3).until(EC.presence_of_element_located(
+        (By.CSS_SELECTOR, "div[class='topMenu-silpoElephant topMenu-item']"))).click()
+    return self
+
+
+def vote_button_text_equals_to(self, driver, button_text):
+    try:
+        button = WebDriverWait(driver, 3).until(
+            EC.presence_of_element_located((By.XPATH, "//span[contains(text(),'ГОЛОСУВАТИ')]")))
+        return button.text == button_text
+    except TimeoutException:
+        return False
+
+
+def topmenu_height(self, driver):
+    try:
+        topmenu = WebDriverWait(driver, 3).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, self.xpath_locator_topmenu)))
+        return topmenu.value_of_css_property('height')
+    except TimeoutException:
+        return False
+
+
+def topmenu_items_fontsize(self, driver):
+    try:
+        topmenu = WebDriverWait(driver, 3).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, "div[class='topMenu']")))
+        return topmenu.value_of_css_property('font-size')
+    except TimeoutException:
+        return False
+
+
+def topmenu_button_clicked_color(self, driver):
+    try:
+        topmenu = WebDriverWait(driver, 3).until(
+            EC.presence_of_element_located((By.XPATH, "//span[contains(text(),'Голосувати')]")))
+        topmenu.click()
+        return topmenu.value_of_css_property('color')
+    except TimeoutException:
+        return False
+
+
+def topmenu_font_family(self, driver):
+    try:
+        topmenu = WebDriverWait(driver, 3).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, "div[class='topMenu']")))
+        return topmenu.value_of_css_property('font-family')
+    except TimeoutException:
+        return False

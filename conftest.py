@@ -1,6 +1,5 @@
 import pytest
 from selenium import webdriver
-from selenium.webdriver.support.wait import WebDriverWait
 
 hostname = 'http://awards.silpo.iir.fozzy.lan/'
 
@@ -21,3 +20,18 @@ def geckodriver():
     driver.get('http://awards.silpo.iir.fozzy.lan/')
     yield driver
     driver.quit()
+
+
+def pytest_report_header(config):
+    return " -== Awards functioning testing =- "
+
+
+# def pytest_addoption(parser):
+#     parser.addoption(
+#         "--cmdopt", action="store", default="type1", help="my option: type1 or type2"
+#     )
+#
+#
+# @pytest.fixture
+# def cmdopt(request):
+#     return request.config.getoption("--cmdopt")
