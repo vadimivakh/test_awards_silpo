@@ -43,7 +43,7 @@ class FaqPage:
         """ Returns quantity of the questions on the page """
         sleep(2)
         question_list = WebDriverWait(driver, 5).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, "p[class$='title']")))
-        count = 0
-        for el in question_list:
-            count += 1
-        return count
+        # count = 0
+        # for el in question_list:
+        #     count += 1
+        return len(question_list)
