@@ -76,10 +76,20 @@ class RulesPage:
 
     def title_font_size(self, driver):
 
-        """ Returns int-type value of the title's fontsize """
+        """ Returns str-type value of the title's fontsize """
         try:
             content_title = WebDriverWait(driver, 3).until(
                 EC.presence_of_element_located((By.XPATH, self.xpath_selector_title_of_page_content)))
             return content_title.value_of_css_property('font-size')
+        except TimeoutException:
+            return False
+
+    def title_font_family(self, driver):
+
+        """ Returns str-type value of the title's font-family """
+        try:
+            content_title = WebDriverWait(driver, 3).until(
+                EC.presence_of_element_located((By.XPATH, self.xpath_selector_title_of_page_content)))
+            return content_title.value_of_css_property('font-family')
         except TimeoutException:
             return False

@@ -19,3 +19,11 @@ class VotingPage:
         except TimeoutException:
             return False
         return True
+
+    def category_by_index(self, driver, category_index):
+        try:
+            menu_list = WebDriverWait(driver, 5),until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, "ul[class='menu']")))
+            for
+        except TimeoutException:
+            return False
+        return self
