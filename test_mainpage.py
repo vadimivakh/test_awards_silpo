@@ -294,6 +294,13 @@ def test_error_message_does_not_exists_with_valid_card_number(web_driver):
     assert len(error_message) == 0
 
 
+def test_is_button_disabled(web_driver):
+    homepage = MainPage(web_driver)
+    loginpage = homepage.click_to_login_button(web_driver)
+    assert loginpage.submit_button_is_active(web_driver), 'submit button is not active'
+
+
+
 """
                                                FAQ PAGE AWARDS
 """
@@ -378,17 +385,45 @@ def test_voting_if_user_is_unlogined(web_driver):
 
 
 @pytest.mark.in_progress
-def test_voting_if_user_is_logined(web_driver)
+def test_voting_if_user_is_logined(web_driver):
 
     """ Checks if the voting by logined user is possible """
     pass
 
+#
+# """
+#                                                VOTING PAGE AWARDS
+# """
+#
+#
+# @pytest.mark.in_progress
+# def test_checking_disabled_status_of_the_voted_products(web_driver):
+#
+#     """ Check if the rest of voted products have appropriate disabled status """
+#     vote_page.category_by_index(category_index=1).sub_category_by_index('1').get_product_by_index(subcategory_index=1).vote(web_driver)
+#     assert vote_page.rest_of_the_product_are_disabled(web_driver)
+#
+#
+# @pytest.mark.done
+# def test_click_to_vote_button(web_driver):
+#
+#     """ Checks if the transition to the voting page is correct """
+#     homepage = MainPage(web_driver)
+#     voting_page = homepage.click_voting_button(web_driver)
+#     assert voting_page.get_current_url(web_driver) == 'http://awards.silpo.iir.fozzy.lan/vote'
+#
+#
+# @pytest.mark.parametrize(subcategory_index, [2, 3])
+# def test_voting(web_driver, ):
+#
+#     """ Checks if voted product falls into the 'My choise' page """
+#     homepage = MainPage(web_driver)
+#     voting_page = homepage.click_voting_button(web_driver)
+#     voted_product =  voting_page.category_by_index(category_index).sub_category_by_index(subcategory_index).get_product_by_index(
+#         subcategory_index=1).vote(web_driver)
+#     assert voting_page.voted_product_falls_into_mychoise(voted_product)
 
-def test_active_status_of_the_voted_products(web_driver):
 
-    """ Check if the rest of voted products have appropriate disabled status """
-    vote_page.category_by_index('1').sub_category_by_index('1').get_product_by_index('1').vote(web_driver)
-    assert vote_page.rest_of_the_product_are_disabled(web_driver)
 
 
 

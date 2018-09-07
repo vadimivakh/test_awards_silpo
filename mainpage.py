@@ -26,7 +26,7 @@ class MainPage:
         self.xpath_locator_faq_topmenu_item = "//div[@class='topMenu-item'][4]"
         self.xpath_locator_topmenu = "// div[@class ='topMenu']"
         self.xpath_locator_my_choise_topmenu_item = "//span[contains(text(),'Мій вибір')]"
-        self.xpath_locator_login_button_topmenu_item = "a[class='exit-icon-wrapper topMenu-item']"
+        self.css_locator_login_button_topmenu_item = "a[href='/login']"
 
     def top_menu_is_exists(self, driver):
 
@@ -71,7 +71,7 @@ class MainPage:
 
     def click_to_login_button(self, driver):
         self.wait.until(
-            EC.element_to_be_clickable((By.CSS_SELECTOR, self.xpath_locator_login_button_topmenu_item))).click()
+            EC.element_to_be_clickable((By.CSS_SELECTOR, self.css_locator_login_button_topmenu_item))).click()
         return LoginPage(driver)
 
     def page_content(self, driver):

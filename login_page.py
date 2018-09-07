@@ -57,7 +57,7 @@ class LoginPage:
     def submit_button_is_active(self, driver):
         # submit_button = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.XPATH, "//span[contains(text(),'увійти')]")))
         return WebDriverWait(driver, 3).until(
-            EC.presence_of_element_located((By.XPATH, "//span[contains(text(),'увійти')]"))).is_enabled
+            EC.presence_of_element_located((By.CSS_SELECTOR, "button[class$='button-enter']:disabled"))).is_enabled
 
     def login_with_invalid_card(self, driver, card_number):
         WebDriverWait(driver, 3).until(
@@ -111,3 +111,5 @@ class LoginPage:
             EC.presence_of_element_located((By.ID, "number"))).send_keys(card_number, Keys.TAB)
         return self
 
+    def get_current_url(self, driver):
+        return driver.current_url
